@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>Mvision USA</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="dependencies/bootstrap/css/bootstrap.min.css">
+  <link rel="stylesheet" href="styles/style.css">
+  <script src="dependencies/jquery/jquery.min.js"></script>
+  <script src="dependencies/popper/popper.min.js"></script>
+  <script src="dependencies/bootstrap/js/bootstrap.min.js"></script>
+</head>
+<body>
+
+  <nav class="navbar navbar-expand-md bg-dark navbar-dark fixed-top">
+    <a class="navbar-brand" href="#">Mvision USA</a>
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#collapsibleNavbar">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="collapsibleNavbar">
+      <ul class="navbar-nav">
+        <li class="nav-item">
+          <a class="nav-link" href="#aboutus">About Us</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="#contact-info">How to Conatct</a>
+        </li>
+      </ul>
+    </div>  
+  </nav>
+  
+
+  <div class="jumbotron text-center landing">
+    <h1>Mvision USA</h1>
+    <p>We will place the slogan here!</p> 
+    <img src="resources/images/img_beirut.jpg">
+  </div>
+  
+  <div class="container-fluid" id="aboutus">
+    <div class="row">
+      <div class="col-sm-4">
+        <h3>Column 1</h3>
+        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit...</p>
+        <p>Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris...</p>
+      </div>
+      <div class="col-sm-4">
+        <h3>Column 2</h3>
+        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit...</p>
+        <p>Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris...</p>
+      </div>
+      <div class="col-sm-4">
+        <h3>Column 3</h3>        
+        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit...</p>
+        <p>Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris...</p>
+      </div>
+    </div>
+  </div>
+
+  <div id="demo" class="carousel slide" data-ride="carousel">
+    <ul class="carousel-indicators">
+      <li data-target="#demo" data-slide-to="0" class="active"></li>
+      <li data-target="#demo" data-slide-to="1"></li>
+      <li data-target="#demo" data-slide-to="2"></li>
+    </ul>
+    <div class="carousel-inner">
+      <div class="carousel-item active">
+        <img src="resources/images/img_call_center.jpg" alt="Los Angeles" width="1100" height="603">
+        <div class="carousel-caption">
+          <h3>Lorem Ipsum</h3>
+          <p>dolor sit amet, consectetur adipisicing elit...</p>
+        </div>   
+      </div>
+      <div class="carousel-item">
+        <img src="resources/images/img_hire.jpg" alt="Chicago" width="1100" height="603">
+        <div class="carousel-caption">
+          <h3>Lorem Ipsum</h3>
+          <p>dolor sit amet, consectetur adipisicing elit...</p>
+        </div>   
+      </div>
+      <div class="carousel-item">
+        <img src="resources/images/img_lb_flag.jpg" alt="New York" width="1100" height="603">
+        <div class="carousel-caption">
+          <h3>Lebanon</h3>
+          <p>Lorem Ipsum dolor sit amet, consectetur adipisicing elit...</p>
+        </div>   
+      </div>
+    </div>
+    <a class="carousel-control-prev" href="#demo" data-slide="prev">
+      <span class="carousel-control-prev-icon"></span>
+    </a>
+    <a class="carousel-control-next" href="#demo" data-slide="next">
+      <span class="carousel-control-next-icon"></span>
+    </a>
+  </div>
+
+  <div class="container contact-info" id="contact-info">
+
+    <h2>How to Contact Us:</h2>
+    <p>If you seek our service, send us your contact info so we can get in touch below:</p>
+    
+    <form method="POST" action="process_form.php">
+      <h3>Contact Info:</h3>
+      <div class="row">
+        <div class="col">
+          <input type="text" class="form-control" id="recruiter_name" placeholder="Recruiter Name" name="recruiter_name" required>
+        </div>
+        <div class="col">
+          <input type="email" class="form-control" id="recruiter_email" placeholder="Recruiter Email" name="recruiter_email" required>
+        </div>
+      </div>
+      <div class="row">
+        <div class="col-xs-12 col-md-6">
+          <input type="text" class="form-control" id="recruiter_company" placeholder="Recruiter Company" name="recruiter_company" required>
+        </div>
+        <div class="col-xs-6 col-md-3">
+          <input type="tel" class="form-control" id="recruiter_phone" placeholder="Phone (xxx-xxx-xxxx)" name="company_phone" pattern="^\d{3}-\d{3}-\d{4}$" required>
+        </div>
+        <div class="col-xs-6 col-md-3">
+          <input type="text" class="form-control" id="ext" placeholder="Extension (leave empty if none)" name="ext">
+        </div>
+      </div>
+      <div class="row">
+        <div class="col-md-12">
+          <input type="text" class="form-control" id="state" placeholder="State" name="state" required>
+        </div>
+      </div> 
+      <div class="row">
+        <div class="col-xs-12 col-md-6">
+          <label for="hours">Hours per Week Needed:</label>
+          <select name="hours" class="custom-select mb-3" required>
+            <option value="?-40">Less than 40 hours</option>
+            <option value="40-100">40-100 hours</option>
+            <option value="100-200">100-200 hours</option>
+            <option value="200-500">200-500 hours</option>
+            <option value="500+">More than 500 hours</option>
+          </select>
+        </div>
+        <div class="col-xs-12 col-md-6">
+          <label for="position">Position:</label>
+          <select name="position" class="custom-select mb-3" required>
+            <option value="Telemarketing">Telemarketing</option>
+            <option value="Appointment Setting">Appointment Setting</option>
+            <option value="Virtual Assistance">Virtual Assistance</option>
+            <option value="Data Entry">Data Entry</option>
+            <option value="Customer Service/Support">Customer Service or Support</option>
+            <option value="Other">Other</option>
+          </select>
+        </div>
+      </div> 
+      <button type="submit" class="btn btn-primary">Submit</button>
+    </form>
+  </div>
+
+  <div class="container-fluid text-center footer">
+    <p>If you are a living in Lebanon and seeking to work with US companies and get paid in USD</p>
+    <h1>Send us your resume</h1>
+    <p>at <a href="mailto: someone@example.com">someone@example.com</a></p>
+  </div>
+</body>
+</html>
